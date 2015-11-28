@@ -25,8 +25,7 @@
 		
 		/* Template config */
 		vm.modal = false;
-		//vm.repertoireImage = "/hooks/ProgrammeTv/img"
-		vm.repertoireImage = "http://florian.lecraver.free.fr/Test"
+		vm.repertoireImage = "/hooks/ProgrammeTv/img"
 		
 		/* datas */
 		vm.plusInfosDescriptif = "";
