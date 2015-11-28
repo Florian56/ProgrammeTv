@@ -1,0 +1,96 @@
+.programmetv-zone-scroll
+{
+	padding-right : 0px;
+	height : 280px;
+	overflow-y : scroll;
+}
+
+.programmetv-zone
+{
+	padding-right : 0px;
+	height : 280px;
+}
+
+.programmetv-table
+{
+	width : 100%;
+}
+
+.programmetv-table > tbody > tr > td
+{
+	padding : 5px;
+	border-top: 1px solid #DDD;
+	vertical-align : middle;
+}
+
+.programmetv-chaine
+{
+	width : 150px;
+}
+
+.programmetv-typeprogramme
+{
+	font-size : unset;
+	font-style : italic;
+}
+
+.programmetv-nomprogramme
+{
+	font-size : medium;
+	color : red;
+	font-family : 'Cataneo BT';
+}
+
+.programmetv-heureprogramme
+{
+	font-weight : bold;
+	width : 65px;
+}
+
+.programmetv-play
+{
+	width : 50px;
+}
+
+.programmetv-play > img
+{
+	width : 32px;
+	height : 32px;
+}
+
+#programmetv-imageparametrage
+{
+	width : 29px;
+	height : 29px;
+}
+
+#programmetv-imageson
+{
+	width : 29px;
+	height : 29px;
+	margin-bottom : 10px;
+}
+
+.programmetv-modal
+{
+    overflow : auto;
+	display : block;
+	background : rgba(0,0,0,0.4);
+}
+
+.programmetv-modal-button
+{
+	margin-top : 10px;
+}
+
+.programmetv-modal-table > tbody > tr > th,
+.programmetv-modal-table > tbody > tr > td
+{
+	text-align : center;
+	vertical-align : middle;
+}
+
+.programmetv-textegras
+{
+	font-weight : bold;
+}
