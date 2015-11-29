@@ -2,12 +2,17 @@
  * Controller
  * @doc http://sailsjs.org/documentation/concepts/controllers
  */
- 
-function say(callback, text)
+
+/**
+ * @method ecouterTexte
+ * @param texte
+ * @param callback
+ */
+function ecouterTexte(texte, callback)
 {
-	console.log('say :', text);
-	SpeakService.say(text);
-	setTimeout(function(){callback();}, text.length * 100);
+	sails.log.info("[ProgrammeTV] ecouterTexte : ", texte);
+	SpeakService.say(texte);
+	setTimeout(function(){callback();}, texte.length * 110);
 }
 
 module.exports = {
@@ -83,8 +88,15 @@ module.exports = {
 		var descriptif = 'Sur ' + req.param('nomChaine') + ' à ' + req.param('heureDebut') + ' : ' + req.param('nomProgramme') + '.';
 		descriptif += req.param('descriptif').replace(/<\/?[^>]+(>|$)/g, " ");
 		
-		sails.log.info("[ProgrammeTV] " + descriptif);
-		SpeakService.say(descriptif);
+		var phrases = descriptif.split('.');
+		var operations = [];
+			
+		for (var i = 0; i < phrases.length; i++)
+			operations.push(ecouterTexte.bind(null, phrases[i]));
+
+		async.series(operations, function(err){
+			if(err) return sails.log.error("[ProgrammeTV] " + err);
+		});
 	},
 	
 	/**
@@ -100,8 +112,6 @@ module.exports = {
 		request += "WHERE c.afficherDansDashboard = 1 ";
 		request += "ORDER BY c.ordreAffichage";
 		
-		console.log('Debut ecouterListeProgrammes');
-		
 		ProgrammeTv.query(request, function(err, programmestv){
 			var operations = [];
 			
@@ -110,13 +120,11 @@ module.exports = {
 				var heure = programmestv[i].heureDebut.replace(":", " teure ");
 				var texte = "Sur " + programmestv[i].nomChaine + " à " + heure + " : " + programmestv[i].nomProgramme;
 				
-				operations.push(say.bind(null, function(textCallback){console.log('OK pour : ', textCallback);}, texte));
-				console.log('Préparation : ', texte);
+				operations.push(ecouterTexte.bind(null, texte));
 			}
 
 			async.series(operations, function(err){
-				if(err)return console.log('err :', err);
-				console.log('success');
+				if(err) return sails.log.error("[ProgrammeTV] " + err);
 			});
 		});
 	}
