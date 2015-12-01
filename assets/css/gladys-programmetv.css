@@ -30,20 +30,17 @@
 
 .programmetv-typeprogramme
 {
-	font-size : unset;
-	font-style : italic;
+	rgba(0,0,0,0.8);
 }
 
 .programmetv-nomprogramme
 {
-	font-size : medium;
-	color : red;
-	font-family : 'Cataneo BT';
+	rgba(0,0,0,1);
+	font-weight:bold;
 }
 
 .programmetv-heureprogramme
 {
-	font-weight : bold;
 	width : 65px;
 }
 
@@ -60,15 +57,15 @@
 
 #programmetv-imageparametrage
 {
-	width : 29px;
-	height : 29px;
+	width : 31px;
+	height : 30px;
 }
 
 #programmetv-imageson
 {
-	width : 29px;
-	height : 29px;
-	margin-bottom : 10px;
+	width : 31px;
+	height : 30px;
+	margin-bottom : 6px;
 }
 
 .programmetv-modal

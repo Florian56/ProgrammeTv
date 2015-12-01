@@ -7,8 +7,8 @@
 						<img ng-src="{{vm.repertoireImage}}/ProgrammeTv_{{programme.nomChaine}}.png" alt="{{programme.nomChaine}}" ng-click="vm.plusInfos(programme)" />
 					</td>
 					<td>
-						<div class="programmetv-typeprogramme">{{programme.typeProgramme}}</div>
 						<div class="programmetv-nomprogramme">{{programme.nomProgramme}}</div>
+						<div class="programmetv-typeprogramme">{{programme.typeProgramme}}</div>
 					</td>
 					<td class="programmetv-heureprogramme">{{programme.heureDebut}}</td>
 					<td class="programmetv-play">
@@ -20,12 +20,12 @@
 		</table>
 	</div>
 	<div class="col-xs-1 programmetv-zone">
-		<div>
-			<img ng-src="{{vm.repertoireImage}}/programmetv_son.jpg" id="programmetv-imageson" ng-click="vm.ecouterListeProgrammes()" />
-		</div>
-		<div>
-			<img ng-src="{{vm.repertoireImage}}/programmetv_parametrage.png" id="programmetv-imageparametrage" ng-click="vm.modal='parametre'" />
-		</div>
+		<button class="btn btn-default btn-sm" ng-click="vm.ecouterListeProgrammes()" id="programmetv-imageson">
+			<i class="fa fa-volume-up"></i>
+		</button>
+		<button class="btn btn-default btn-sm" ng-click="vm.modal='parametre'" id="programmetv-imageparametrage">
+			<i class="fa fa-cog"></i>
+		</button>
 	</div>
 </div>
 
