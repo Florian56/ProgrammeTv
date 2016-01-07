@@ -25,7 +25,7 @@
 		
 		/* Template config */
 		vm.modal = false;
-		vm.repertoireImage = "/hooks/ProgrammeTv/img"
+		vm.repertoireImage = "/hooks/gladys-programmetv/img"
 		
 		/* datas */
 		vm.plusInfosDescriptif = "";
