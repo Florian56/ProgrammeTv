@@ -4,7 +4,7 @@
 ## Installation
 
 <pre><code><i># Aller dans le répertoire hooks</i>
-$ cd api/hooks
+$ cd /usr/local/lib/node_modules/gladys/api/hooks
 
 <i># Clone du github</i>
 $ git clone https://github.com/Florian56/gladys-programmetv.git gladys-programmetv
