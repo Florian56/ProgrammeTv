@@ -1,23 +1,14 @@
 {
   "name": "gladys-programmetv",
-  "version": "1.0.0",
-  "description": "TV guide for Gladys",
+  "version": "0.1.0",
+  "description": "Gladys hooks to get television programs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Florian56/gladys-programmetv.git"
-  },
-  "author": "",
-  "license": "Creative Commons 3.0 France",
-  "bugs": {
-    "url": "https://github.com/Florian56/gladys-programmetv/issues"
-  },
-  "homepage": "https://github.com/Florian56/gladys-programmetv#readme",
+  "author": "Fl0r!an",
+  "license": "CC-BY-NC-SA-3.0",
   "dependencies": {
-    "sails-util-mvcsloader": "^0.3.0",
-    "xml2js": "^0.4.15"
+    "xml2js": "^0.4.19"
   }
 }
